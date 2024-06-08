@@ -230,7 +230,7 @@ export default function GuestLogForm({ guests }) {
     useEffect(() => {
         const timeout = setTimeout(() => {
             Inertia.visit("/", { replace: true });
-        }, 30000);
+        }, 60000);
 
         const resetTimeout = () => {
             clearTimeout(timeout);
