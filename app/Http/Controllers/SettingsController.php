@@ -8,12 +8,15 @@ use Inertia\Inertia;
 
 class SettingsController extends Controller
 {
+    public function routeSettings()
+    {
+        return Inertia::render('Configuration/Config');
+    }
+
     public function getSettings()
     {
         $settings = Setting::first();
-        return Inertia::render('Configuration/Config', [
-            'settings' => $settings
-        ]);
+        return response()->json($settings);
     }
 
     public function updateSettings(Request $request)

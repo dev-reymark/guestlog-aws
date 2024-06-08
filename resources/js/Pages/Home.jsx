@@ -369,21 +369,25 @@ export default function Home({ auth, mediaUrls = [] }) {
                                             height={40}
                                             width={40}
                                         />
-                                        
+
                                         <div className="flex flex-col">
                                             <p className="text-md">
-                                                {company_name}
+                                                {company_name
+                                                    ? company_name
+                                                    : "Company Name Not Defined"}
                                             </p>
                                             <p className="text-small text-default-500">
-                                                {website}
+                                                {website
+                                                    ? website
+                                                    : "Website Not Defined"}
                                             </p>
                                         </div>
                                     </div>
-                                    <Image
+                                    {/* <Image
                                         alt="Datalogic logo"
                                         src="/assets/images/npc-seal.png"
                                         className="w-20 h-15"
-                                    />
+                                    /> */}
                                 </CardHeader>
                                 <Divider />
                                 <CardFooter>

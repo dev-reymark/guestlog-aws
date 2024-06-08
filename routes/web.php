@@ -60,7 +60,8 @@ Route::get('/', [UploadController::class, 'index'])->name('media.index');
 Route::get('/upload/all', [UploadController::class, 'show']);
 Route::delete('/uploads/{id}', [UploadController::class, 'destroy']);
 
-Route::get('/config', [SettingsController::class, 'getSettings'])->name('settings');
+Route::get('/config', [SettingsController::class, 'getSettings']);
 Route::post('/config', [SettingsController::class, 'updateSettings']);
+Route::get('/configuration', [SettingsController::class, 'routeSettings'])->name('settings');
 
 require __DIR__ . '/auth.php';
